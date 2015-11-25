@@ -16,11 +16,11 @@
 1. Install Oracle Driver
  Download Oracle JDBC driver http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html
 
-     $ mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=xyz -Dpackaging=jar -Dfile=ojdbc6.jar -DgeneratePom=true
+   ```$ mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=xyz -Dpackaging=jar -Dfile=ojdbc6.jar -DgeneratePom=true```
 
  Download Oracle SDOAPI.jar, this one is hard to get, Comes with oracle standard/enterprise edition
 
-     $ mvn install:install-file -DgroupId=com.oracle -DartifactId=sdoapi -Dversion=xyz -Dpackaging=jar -Dfile=sdoapi.jar -DgeneratePom=true
+   ```$ mvn install:install-file -DgroupId=com.oracle -DartifactId=sdoapi -Dversion=xyz -Dpackaging=jar -Dfile=sdoapi.jar -DgeneratePom=true```
 
 ## Database Configuration
   + Please update the DB settings in the file : `src/main/resources/db.props`
@@ -31,4 +31,4 @@
   + To launch the interface, run `java -jar target/mapview-jfx-1.0-SNAPSHOT-jar-with-dependencies.jar`
   
 ## Screenshots 
-  + docs/screenshot1.png
+  + ![Screenshot1](./docs/screenshot1.png)
