@@ -6,15 +6,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *  A (C)onstant or (C)onfig block for all the config constants
+ *  A Constant or Config block for all the config constants
  */
 public interface C {
 
+    /**
+     * This block contains column names
+     */
     interface column {
         String ID = "id";
         String GEOM = "geom";
     }
 
+    /**
+     * This block contains table names
+     */
     interface table {
         String LION = "lion";
         String REGION = "region";

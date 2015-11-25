@@ -1,7 +1,7 @@
 package edu.usc.cs.db.hw5.model;
 
 /**
- * Created by tg on 11/24/15.
+ * This model stores information related to Ambulances
  */
 public class Ambulance extends GeoModel {
 }

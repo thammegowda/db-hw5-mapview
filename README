@@ -1,9 +1,0 @@
-## Pre Setup
-1. Install Oracle Driver
- Download Oracle JDBC driver http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html
-
-     $ mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=xyz -Dpackaging=jar -Dfile=ojdbc6.jar -DgeneratePom=true
-
- Download Oracle SDOAPI.jar, this one is hard to get, Comes with oracle standard/enterprise edition
-
-     $ mvn install:install-file -DgroupId=com.oracle -DartifactId=sdoapi -Dversion=xyz -Dpackaging=jar -Dfile=sdoapi.jar -DgeneratePom=true

@@ -4,6 +4,7 @@ import oracle.spatial.geometry.JGeometry;
 
 /**
  * Base Class for all the models with geometry and ID
+ * @author Thamme Gowda N
  */
 public class GeoModel {
 

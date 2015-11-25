@@ -1,13 +1,12 @@
 package edu.usc.cs.db.hw5.util;
 
 /**
- * Created by tg on 11/25/15.
+ * An helper utility for dealing with geometry
  */
 public class GeometryHelper {
 
 
     /**
-     *
      * Computes distance between two points
      * @param x1 x coordinate of first point
      * @param y1 y coordinate of first point
@@ -16,7 +15,7 @@ public class GeometryHelper {
      * @return distance between the points
      */
     public static double distance(double x1, double y1, double x2, double y2){
-        // sqrt((y2-y1)^2 /  (x2-x1)^)
+        // sqrt((y2-y1)^2 + (x2-x1)^)
         return Math.sqrt( (Math.pow(y2 - y1, 2) + Math.pow(x2 - x1, 2)) );
     }
 

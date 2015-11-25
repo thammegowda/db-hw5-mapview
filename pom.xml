@@ -7,14 +7,28 @@
     <groupId>edu.usc.cs.db.hw5</groupId>
     <artifactId>mapview-jfx</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <name>mapview-jfx</name>
+    <description>
+        This project was created as part of USC Fall 2015 CSCI-585 Coursework.
+        The main purpose of the project is to demonstrate that the student/developer has understood the concepts of
+        Relational Databases, JDBC and Spatial Operations.
+        A simple user interface based on JavaFX and its 2d Canvas API is created to show the spatial data
+        and to permit interactions with it.
+    </description>
     <properties>
         <slf4j.version>1.7.12</slf4j.version>
         <exec.mainClass>edu.usc.cs.db.hw5.view.MapView</exec.mainClass>
     </properties>
+    <developers>
+        <developer>
+            <id>USC-ID:2074669439</id>
+            <name>ThammeGowda N.</name>
+            <email>tnarayan@usc.edu</email>
+        </developer>
+    </developers>
 
-    <!-- Oracle propriatory stuff. Look for presetup in README . -->
     <dependencies>
+        <!-- Oracle proprietary jars. Look for pre setup in README.md  -->
         <dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc6</artifactId>
@@ -22,23 +36,11 @@
         </dependency>
 
         <dependency>
+            <!-- Oracle proprietary jar. Look for pre setup in README.md . -->
             <groupId>com.oracle</groupId>
             <artifactId>sdoapi</artifactId>
             <version>xyz</version>
         </dependency>
-
-        <!-- -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-
     </dependencies>
 
     <build>

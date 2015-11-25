@@ -10,8 +10,7 @@ import java.sql.SQLException;
 import java.util.Iterator;
 
 /**
- *
- * Iterates over result set and maps the rows to objects
+ * Iterates over a database result set by mapping each rows to an object
  */
 public class ModelIterator<T extends GeoModel> implements Iterator<T>, AutoCloseable {
 
@@ -20,18 +19,17 @@ public class ModelIterator<T extends GeoModel> implements Iterator<T>, AutoClose
     private T next;
     private int count;
 
-    private Closeable[] closeables;
-
+    /**
+     * Creates an iterator
+     * @param orm ORM service for mapping rows to object
+     * @param result DB result set cursor
+     */
     public ModelIterator(OrmService<T> orm, ResultSet result) {
         assert orm != null;
         assert result != null;
         this.result = result;
         this.orm = orm;
         this.next = readNext();
-    }
-
-    public void setOnClose(Closeable...closeables) {
-        this.closeables = closeables;
     }
 
     @Override
@@ -70,11 +68,6 @@ public class ModelIterator<T extends GeoModel> implements Iterator<T>, AutoClose
             }
         } catch (SQLException e) {
             throw new IOException(e);
-        }
-        if (this.closeables != null){
-            for (Closeable closeable : this.closeables) {
-                closeable.close();
-            }
         }
     }
 }
