@@ -6,8 +6,6 @@ import edu.usc.cs.db.hw5.model.Lion;
 import edu.usc.cs.db.hw5.model.Pond;
 import edu.usc.cs.db.hw5.model.Region;
 import edu.usc.cs.db.hw5.util.ModelIterator;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
 import java.sql.*;
@@ -20,7 +18,6 @@ import java.util.Properties;
  */
 public class DbService {
 
-    private static final Logger LOG = LoggerFactory.getLogger(DbService.class);
 
     private final Connection conn;
 
@@ -119,7 +116,7 @@ public class DbService {
                 this.testConnection();
             }
         } catch (Exception e) {
-            LOG.error(e.getMessage());
+            System.err.println(e.getMessage());
             throw new IllegalStateException(e);
         }
     }
@@ -137,8 +134,8 @@ public class DbService {
                                      String username, String password)
             throws Exception {
 
-        LOG.info("Opening connection driver:{}; \n url:{}," +
-                "\n username:{}, password:****", driverName, url, username);
+        System.out.println(String.format("Opening connection driver:%s; \n url:%s," +
+                "\n username:%s, password:****", driverName, url, username));
 
         //load the driver
         Class.forName(driverName);
